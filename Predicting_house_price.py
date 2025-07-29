@@ -10,7 +10,7 @@ y = np.array([50, 70, 90, 110])
 
 # Training model
 model = LR()
-model.fit(X,y) # fit tells the model to learn the relationship or patter between X (input) and y (output)
+model.fit(X,y) # fit tells the model to learn the relationship or pattern between X (input) and y (output)
 
 # Predicting price
 predicted_price = model.predict([[1800]])
