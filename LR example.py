@@ -17,8 +17,8 @@ predicted_price = model.predict([[1800]])
 print(f"The predicted price for 1800 sq ft: Rs {predicted_price[0]:.2f} Lakhs")
 
 # Visualization
-plt.scatter(X, y, color='black', label='Actual Prices')
-plt.plot(X, model.predict(X), color='red', label='Regression Line')
+plt.scatter(X, y, color='black', label='Actual Prices') # Training line
+plt.plot(X, model.predict(X), color='red', label='Regression Line') # Testing line  
 plt.xlabel("House Size (sq ft)")
 plt.ylabel("Price (Lakhs)")
 plt.title("House price prediction")
