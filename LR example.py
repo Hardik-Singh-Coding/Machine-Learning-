@@ -12,16 +12,16 @@ y = np.array([50, 70, 90, 110])
 model = LR()
 model.fit(X,y) # fit tells the model to learn the relationship or pattern between X (input) and y (output)
 
-# Predicting price
-predicted_price = model.predict([[1800]])
-print(f"The predicted price for 1800 sq ft: Rs {predicted_price[0]:.2f} Lakhs")
-
 # Visualization
-plt.scatter(X, y, color='black', label='Actual Prices') # Training line
-plt.plot(X, model.predict(X), color='red', label='Regression Line') # Testing line  
+plt.scatter(X, y, color='black', label='Actual Prices') # Labeled data
+plt.plot(X, model.predict(X), color='red', label='Regression Line') # Here we train the model to predict 
 plt.xlabel("House Size (sq ft)")
 plt.ylabel("Price (Lakhs)")
 plt.title("House price prediction")
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Predicting price
+predicted_price = model.predict([[1800]])
+print(f"The predicted price for 1800 sq ft: Rs {predicted_price[0]:.2f} Lakhs") # Here we test the model
